@@ -28,7 +28,7 @@ excerpt: Xing Han Lu, Siva Reddy, Harm de Vries
 ---
 
 
-![Sample image showing the conversation between a user and an agent](/assets/images/banner.svg)
+![Sample image showing the conversation between a user and an agent]({{ '/assets/images/banner.svg' | relative_url }})
 
 Welcome to the website of our *EACL 2023* paper:
 
