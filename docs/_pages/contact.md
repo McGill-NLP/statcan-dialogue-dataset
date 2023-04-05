@@ -3,7 +3,10 @@ title: "Contact"
 permalink: /contact/
 ---
 
-You can reach out to us by email: `firstname (dot) lastname (at) mila (dot) quebec`
+If you have any questions, feel free to contact us. 
 
-If you have any question, bug report or would like to contribute to the code, please open an issue in the project repository.
+For any code-related questions, please open an issue on our [GitHub repository](https://github.com/McGill-NLP/statcan-dialogue-dataset). 
+
+For anything else, you can reach out to us by email, which can be found in the paper.
+
 
