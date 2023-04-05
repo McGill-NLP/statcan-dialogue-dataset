@@ -1,0 +1,14 @@
+{
+    "docs/_docs/statcan_dialogue_dataset.md": [
+        "statcan_dialogue_dataset/__init__.py"
+    ],
+    "docs/_docs/statcan_dialogue_dataset/utils.md": [
+        "statcan_dialogue_dataset/utils.py"
+    ],
+    "docs/_docs/statcan_dialogue_dataset/cli-process.md": [
+        "statcan_dialogue_dataset/cli/process/*.py"
+    ],
+    "docs/_docs/statcan_dialogue_dataset/metadata.md": [
+        "statcan_dialogue_dataset/metadata.py"
+    ]
+}

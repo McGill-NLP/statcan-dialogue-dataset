@@ -1,28 +1,10 @@
-# Project Page Template
+# Project website
 
-This is a project page template for McGill-NLP projects.
-
-![Demo of project page](images/demo.jpg)
+This is a project website for Statcan Dialogue Dataset.
 
 ## Getting started
 
 You can follow one of the following ways to get started.
-
-### Copy from template
-
-If you have not yet created a repo for your project, you can copy the template from the following link. Simply click on the "Use this template" button, or [click here](https://github.com/McGill-NLP/project-page-template/generate).
-
-### Cloning with git
-
-If you have already created a repo for your project, you can clone the template and copy the files to your project. Let's assume you are in the root of your project directory, e.g. `my-project`.
-
-```bash
-cd ..  # Go to parent directory
-git clone https://github.com/McGill-NLP/project-page-template
-cp -r project-page-template/docs my-project/
-cp project-page-template/README.md my-project/docs/
-cd my-project/
-```
 
 ## Activate GitHub Pages
 
@@ -39,9 +21,7 @@ Once the template is copied to your project, you need to activate GitHub Pages f
 ### Why `docs/`?
 
 You might be wondering why all the files for the webpage is in `/docs`. Well the page is not really "docs" per se, it's because `github-pages` only allows us to either use the root folder or `/docs`. So we are forced to use the latter in order to clearly separate this page from the rest of the project. Maybe in the future GitHub will allow other names like `/page`, but before then there's nothing we can do... 
-  
-> Well technically, you *can* push everything to a separate branch, but the original author of this repo is in the school of thought that branches are meant for alternate or historical versions of the `main` branch, or serve as a way to create pull requests. The original author will also vehemently defend this philosophy if one tries to argue otherwise :)
-  
+
 But what if you actually want to write some docs for your library? You can just edit `docs/_pages/docs.md`, which is the real page for documentations.
   
 
@@ -84,6 +64,7 @@ Please refer to setup instructions in the readme of the [group website](https://
 
 ```bash
 cd docs/
+bundle install
 bundle exec jekyll serve
 ```
 

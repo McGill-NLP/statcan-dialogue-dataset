@@ -1,8 +1,6 @@
 main:
   - title: "Home"
     url: /
-  - title: "Leaderboard"
-    url: /leaderboard/
   - title: "Docs"
     url: /docs/
   - title: "Contact"
@@ -11,7 +9,9 @@ main:
 sidebar-docs:  # See "include" in /_config.yml and /docs/_docs
   - title: "Home"
     url: /docs/
-  - title: "API"
-    url: /docs/api
-  - title: "Training"
-    url: /docs/training
+  - title: "Core API"
+    url: /docs/core/
+  - title: "Metadata"
+    url: /docs/metadata/
+  - title: "Data Processing CLI"
+    url: /docs/cli-process/
