@@ -2,8 +2,8 @@
 
 <div align="center">
 
-| [Request Data (Huggingface)](https://huggingface.co/datasets/McGill-NLP/statcan-dialogue-dataset/) | [Request Data (Dataverse)](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/NR0BMY) | [Code](https://github.com/mcGill-NLP/statcan-dialogue-dataset) | [Paper (Arxiv)](https://arxiv.org/abs/2304.01412) | [Website](https://mcgill-nlp.github.io/statcan-dialogue-dataset) |
-| :--: | :--: | :--: | :--: | :--: |
+[**💻Code**](https://github.com/mcGill-NLP/statcan-dialogue-dataset) | [**📄Paper**](https://arxiv.org/abs/2304.01412) | [**🌐Homepage**](https://mcgill-nlp.github.io/statcan-dialogue-dataset) |
+| :--: | :--: | :--: |
 
 > **[The StatCan Dialogue Dataset: Retrieving Data Tables through Conversations with Genuine Intents](https://arxiv.org/abs/2304.01412)**\
 > *[Xing Han Lu](https://xinghanlu.com), [Siva Reddy](https://sivareddy.in), [Harm de Vries](https://www.harmdevries.com/)*\
