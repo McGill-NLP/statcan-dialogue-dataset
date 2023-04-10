@@ -18,7 +18,7 @@ Then, you can start using the functions in this module.
 ## `download_dataverse`
 
 ```python
-sdd.download_dataverse(api_token, server_url="https://borealisdata.ca", persistent_id="doi:10.5683/SP3/NR0BMY", filename="task_data.zip", data_dir=None, overwrite=False)
+sdd.download_dataverse(api_token, server_url="https://borealisdata.ca", persistent_id="doi:10.5683/SP3/NR0BMY", filename="task_data.zip", data_dir=None, overwrite=False, bundle_name="dataverse_files.zip", remove_bundle=False)
 ```
 
 ### Description
@@ -39,7 +39,8 @@ from the account that has been granted access to the file.
 | `filename` | `str` | `"task_data.zip"` | The name of the file to download. By default, this is the name of the file in the StatCan Dialogue Dataset. |
 | `data_dir` | `str or Path` | `None` | The directory to download the file to. By default, this is the directory returned by `utils.get_data_dir()`. If the directory does not exist, it will be created. |
 | `overwrite` | `bool` | `False` | Whether to overwrite the file if it already exists. By default, this is False, which means that the file will not be downloaded if it already exists. |
-
+| `bundle_name` | `str` | `"dataverse_files.zip"` | The name of the bundle file that contains the file to download. By default, this is the default name used by Dataverse. Note that it is indeed possible that it contains a zip file (so a zip in a zip), which is the case by default (task_data.zip  is contained in dataverse_files.zip). You generally don't need to change this nor  the `filename` above. |
+| `remove_bundle` | `bool` | `False` | Whether to remove the bundle file after extracting the file. |
 
 ### Note
 

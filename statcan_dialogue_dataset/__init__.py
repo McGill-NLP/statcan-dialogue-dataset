@@ -22,6 +22,8 @@ def download_dataverse(
     filename="task_data.zip",
     data_dir=None,
     overwrite=False,
+    bundle_name="dataverse_files.zip",
+    remove_bundle=False,
 ):
     """
     Download a file from a Dataverse repository. By default, this downloads the
@@ -58,30 +60,45 @@ def download_dataverse(
         Whether to overwrite the file if it already exists. By default, this is False,
         which means that the file will not be downloaded if it already exists.
 
+    bundle_name : str, default "dataverse_files.zip"
+        The name of the bundle file that contains the file to download. By default,
+        this is the default name used by Dataverse. Note that it is indeed possible that it
+        contains a zip file (so a zip in a zip), which is the case by default (task_data.zip 
+        is contained in dataverse_files.zip). You generally don't need to change this nor 
+        the `filename` above.
+    
+    remove_bundle : bool, default False
+        Whether to remove the bundle file after extracting the file.
+    
     Note
     ----
     Once this is downloaded, you can load the task data using the `extract_task_data_zip` function.
     """
-    if data_dir is None:
-        data_dir = utils.get_data_dir()
-    else:
-        data_dir = Path(data_dir)
-        data_dir.mkdir(parents=True, exist_ok=True)
+    data_dir = utils.infer_and_create_dir(data_dir, utils.get_data_dir())
     
     if (data_dir / filename).exists() and not overwrite:
         print(f"File {filename} already exists in {data_dir}. Skipping download.")
         return
+    elif (data_dir / bundle_name).exists() and not overwrite:
+        print(f"File {bundle_name} already exists in {data_dir}. Skipping download.")
+    else:
+        url = f"{server_url}/api/access/dataset/:persistentId?persistentId={persistent_id}"
 
-    url = f"{server_url}/api/access/dataset/:persistentId?persistentId={persistent_id}"
+        # Need to pass the API token in the header
+        headers = {"X-Dataverse-key": api_token}
 
-    # Need to pass the API token in the header
-    headers = {"X-Dataverse-key": api_token}
+        # Make the request with urllib
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers)) as response:
+            with open(data_dir / bundle_name, "wb") as f:
+                f.write(response.read())
 
-    # Make the with urllib
-    with urllib.request.urlopen(urllib.request.Request(url, headers=headers)) as response:
-        with open(data_dir / filename, "wb") as f:
-            f.write(response.read())
+    # Extract the file from the bundle
+    with zipfile.ZipFile(data_dir / bundle_name, "r") as zip_ref:
+        zip_ref.extract(filename, data_dir)
 
+    if remove_bundle:
+        os.remove(data_dir / bundle_name)
+    
     return data_dir / filename
 
 def download_huggingface(
@@ -129,11 +146,7 @@ def download_huggingface(
     ----
     Once this is downloaded, you can load the task data using the `extract_task_data_zip` function.
     """
-    if data_dir is None:
-        data_dir = utils.get_data_dir()
-    else:
-        data_dir = Path(data_dir)
-        data_dir.mkdir(parents=True, exist_ok=True)
+    data_dir = utils.infer_and_create_dir(data_dir, utils.get_data_dir())
     
     if (data_dir / filename).exists() and not overwrite:
         print(f"File {filename} already exists in {data_dir}. Skipping download.")
@@ -176,11 +189,7 @@ def download_full_tables(
     Path
         The path to the downloaded tables.
     """
-    if data_dir is None:
-        data_dir = utils.get_data_dir()
-    else:
-        data_dir = Path(data_dir)
-        data_dir.mkdir(parents=True, exist_ok=True)
+    data_dir = utils.infer_and_create_dir(data_dir, utils.get_data_dir())
 
     if lang not in ["en", "fr"]:
         raise ValueError(f"lang must be 'en' or 'fr', not '{lang}'")
@@ -261,7 +270,7 @@ def extract_task_data_zip(filename="task_data.zip", data_dir=None, load_dir=None
 
     # Extract file and save it to the data directory
     with zipfile.ZipFile(path, "r") as zip_ref:
-        zip_ref.extractall(data_dir)
+        zip_ref.extractall(str(data_dir))
 
     # Remove the ZIP file
     if remove_zip:
@@ -324,7 +333,7 @@ def extract_full_tables(data_dir=None, remove_zip=False, lang="en"):
         data_dir = Path(data_dir)
 
     with zipfile.ZipFile(data_dir / f"tables-{lang}.zip", "r") as zip_ref:
-        zip_ref.extractall(data_dir / f"tables-{lang}")
+        zip_ref.extractall(str(data_dir / f"tables-{lang}"))
 
     if remove_zip:
         os.remove(data_dir / f"tables-{lang}.zip")
