@@ -62,11 +62,7 @@ def download_dataverse(
     ----
     Once this is downloaded, you can load the task data using the `extract_task_data_zip` function.
     """
-    if data_dir is None:
-        data_dir = utils.get_data_dir()
-    else:
-        data_dir = Path(data_dir)
-        data_dir.mkdir(parents=True, exist_ok=True)
+    utils.infer_and_create_dir(data_dir, utils.get_data_dir())
     
     if (data_dir / filename).exists() and not overwrite:
         print(f"File {filename} already exists in {data_dir}. Skipping download.")
@@ -129,11 +125,7 @@ def download_huggingface(
     ----
     Once this is downloaded, you can load the task data using the `extract_task_data_zip` function.
     """
-    if data_dir is None:
-        data_dir = utils.get_data_dir()
-    else:
-        data_dir = Path(data_dir)
-        data_dir.mkdir(parents=True, exist_ok=True)
+    utils.infer_and_create_dir(data_dir, utils.get_data_dir())
     
     if (data_dir / filename).exists() and not overwrite:
         print(f"File {filename} already exists in {data_dir}. Skipping download.")
@@ -176,11 +168,7 @@ def download_full_tables(
     Path
         The path to the downloaded tables.
     """
-    if data_dir is None:
-        data_dir = utils.get_data_dir()
-    else:
-        data_dir = Path(data_dir)
-        data_dir.mkdir(parents=True, exist_ok=True)
+    utils.infer_and_create_dir(data_dir, utils.get_data_dir())
 
     if lang not in ["en", "fr"]:
         raise ValueError(f"lang must be 'en' or 'fr', not '{lang}'")
