@@ -35,3 +35,15 @@ def get_temp_dir():
     """
     return Path(os.getenv("STATCAN_TEMP_DIR", get_data_dir())) / "temp"
 
+def infer_and_create_dir(dir_name: str, default_dir: Path):
+    """
+    Automatically infers the directory from the given path. If dir_name is None, returns the default data directory.
+    Otherwise, cast dirname to a Path object, create the directory, and return it.
+    """
+    if dir_name is None:
+        dir_name = default_dir
+    
+    path = Path(dir_name)
+    path.mkdir(parents=True, exist_ok=True)
+    
+    return path
