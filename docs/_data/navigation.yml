@@ -3,6 +3,8 @@ main:
     url: /
   - title: "Docs"
     url: /docs/
+  - title: "Leaderboard"
+    url: /leaderboard/
   - title: "Contact"
     url: /contact/
 
