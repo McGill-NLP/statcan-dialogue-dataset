@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[**💻Code**](https://github.com/mcGill-NLP/statcan-dialogue-dataset) | [**📄Paper**](https://arxiv.org/abs/2304.01412) | [**🌐Homepage**](https://mcgill-nlp.github.io/statcan-dialogue-dataset) |
-| :--: | :--: | :--: |
+[**💻Code**](https://github.com/mcGill-NLP/statcan-dialogue-dataset) | [**📄Paper**](https://arxiv.org/abs/2304.01412) | [**🌐Homepage**](https://mcgill-nlp.github.io/statcan-dialogue-dataset) | [**🤗Huggingface**](https://huggingface.co/datasets/McGill-NLP/statcan-dialogue-dataset) | [**🐦Tweets**](https://twitter.com/xhluca/status/1648728708142727180) | [**📺Video**](https://aclanthology.org/2023.eacl-main.206.mp4) |
+| :--: | :--: | :--: | :--: | :--: | :--: |
 
 > **[The StatCan Dialogue Dataset: Retrieving Data Tables through Conversations with Genuine Intents](https://arxiv.org/abs/2304.01412)**\
 > *[Xing Han Lu](https://xinghanlu.com), [Siva Reddy](https://sivareddy.in), [Harm de Vries](https://www.harmdevries.com/)*\
@@ -59,10 +59,29 @@ For more information, head to the [Core API Reference](https://mcgill-nlp.github
 
 The full `eacl_code` directory contains the code used to produce the results in the paper. To reproduce the results, start by reading the `README.md` file in the `eacl_code` directory.
 
-
 ## StatCan resources
 
 You may find the following external resources useful:
 * [Web Data Service User Guide](https://www.statcan.gc.ca/eng/developers/wds/user-guide)
 * [Web Data Service API](https://www.statcan.gc.ca/eng/developers/wds)
 * [Developer homepage](https://www.statcan.gc.ca/eng/developers)
+
+## Citation
+
+If you use our dataset, please cite our paper:
+
+```bibtex
+@inproceedings{lu-etal-2023-statcan,
+    title = "The {S}tat{C}an Dialogue Dataset: Retrieving Data Tables through Conversations with Genuine Intents",
+    author = "Lu, Xing Han  and
+      Reddy, Siva  and
+      de Vries, Harm",
+    booktitle = "Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics",
+    month = may,
+    year = "2023",
+    address = "Dubrovnik, Croatia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/2304.01412",
+    pages = "2799--2829",
+}
+```

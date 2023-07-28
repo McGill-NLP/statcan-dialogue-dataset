@@ -1,0 +1,30 @@
+cff-version: "1.2.0"
+date-released: 2023-05-02
+message: "If you use our dataset, models or other aspects of our work, please cite the paper."
+authors:
+  - family-names: "Lu"
+    given-names: "Xing Han"
+  - family-names: "Reddy"
+    given-names: "Siva"
+  - family-names: "de Vries"
+    given-names: "Harm"
+title: Statcan Dialogue Dataset
+doi: "10.48550/arXiv.2304.01412"
+url: "https://arxiv.org/abs/2304.01412"
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "Lu"
+      given-names: "Xing Han"
+    - family-names: "Reddy"
+      given-names: "Siva"
+    - family-names: "de Vries"
+      given-names: "Harm"
+  title: "The StatCan Dialogue Dataset: Retrieving Data Tables through Conversations with Genuine Intents"
+  year: 2023
+  month: 05
+  booktitle: "Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics"
+  start: 2799
+  end: 2829
+  doi: "10.48550/arXiv.2304.01412"
+  url: "https://arxiv.org/abs/2304.01412"

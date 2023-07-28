@@ -16,12 +16,12 @@ header:
         - label: "Dataverse"
           url: "https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/NR0BMY"
           icon: "fas fa-database"
-        # - label: "Tweets"
-        #   url: "https://twitter.com/"
-        #   icon: "fab fa-twitter"
-        # - label: "Video"
-        #   url: "https://youtube.com"
-        #   icon: "fas fa-video"
+        - label: "Tweets"
+          url: "https://twitter.com/xhluca/status/1648728708142727180"
+          icon: "fab fa-twitter"
+        - label: "Video"
+          url: "https://aclanthology.org/2023.eacl-main.206.mp4"
+          icon: "fas fa-video"
 
 title: "StatCan Dialogue Dataset"
 excerpt: Xing Han Lu, Siva Reddy, Harm de Vries
@@ -51,4 +51,28 @@ For other code-related details, please check out our [GitHub repository](https:/
 
 ## Citation
 
-If you use our dataset, please cite our paper linked at the top of this page.
+If you use our dataset, please cite as follows:
+
+```bibtex
+@inproceedings{lu-etal-2023-statcan,
+    title = "The {S}tat{C}an Dialogue Dataset: Retrieving Data Tables through Conversations with Genuine Intents",
+    author = "Lu, Xing Han  and
+      Reddy, Siva  and
+      de Vries, Harm",
+    booktitle = "Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics",
+    month = may,
+    year = "2023",
+    address = "Dubrovnik, Croatia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/2304.01412",
+    pages = "2799--2829",
+}
+```
+
+## Video
+
+You can watch the video presentation of our paper at EACL 2023 below:
+
+<div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+    <iframe src="https://aclanthology.org/2023.eacl-main.206.mp4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
