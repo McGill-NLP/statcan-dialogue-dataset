@@ -1,0 +1,14 @@
+{
+    "english": {
+        "train": 3782,
+        "dev": 799,
+        "test": 870,
+        "corpus": 5907
+    },
+    "french": {
+        "train": 869,
+        "dev": 201,
+        "test": 141,
+        "corpus": 5907
+    }
+}
