@@ -70,7 +70,7 @@ You may find the following external resources useful:
 
 ## Citation
 
-If you use our dataset, please cite our paper:
+If you use our dataset, please cite our conference paper:
 
 ```bibtex
 @inproceedings{lu-etal-2023-statcan,
