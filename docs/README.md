@@ -1,6 +1,6 @@
 # Project website
 
-This is a project website for Statcan Dialogue Dataset.
+This is the official project website for Statcan Dialogue Dataset.
 
 ## Getting started
 
