@@ -16,7 +16,7 @@
 
 </div>
 
-This repository contains the code for our project. For detailed information, instructions on requesting access, API user guide and documentation, please visit the [website](https://mcgill-nlp.github.io/statcan-dialogue-dataset). You can find useful links above. A quickstart is provided below.
+This repository contains the code for our project. For more  detailed information, instructions on requesting access, API user guide and documentation, please visit the [website](https://mcgill-nlp.github.io/statcan-dialogue-dataset). You can find useful links above. A quickstart is provided below.
 
 ## Quickstart
 
